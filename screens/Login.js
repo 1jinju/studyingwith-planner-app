@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { auth } from '../firebase'
 
-const LoginScreen = () => {
+const LoginScreen = ({}) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -45,6 +45,7 @@ const LoginScreen = () => {
       behavior="padding"
     >
       <View style={styles.inputContainer}>
+      <Text style={{fontSize:30, paddingBottom: 50, color:'black'}}>스터딩윗</Text>
         <TextInput
           placeholder="Email"
           value={email}
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
   input: {
     backgroundColor: 'white',
     paddingHorizontal: 15,
-    paddingVertical: 10,
+    paddingVertical: 15,
     borderRadius: 10,
     marginTop: 5,
   },
@@ -104,8 +105,8 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#0782F9',
-    width: '100%',
-    padding: 15,
+    width: '90%',
+    padding: 13,
     borderRadius: 10,
     alignItems: 'center',
   },
