@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import Home from '../screens/Home';
-import Timer from '../screens/Timer';
+import Time from '../screens/Time';
 import Statistics from '../screens/Statistics';
 import Download from '../screens/Download';
 
@@ -32,16 +32,16 @@ const Tabs = ({route}) => {
             tabBarIcon: ({focused}) => 
                 focused ? (
                   <Ionicons name="home" size={24} color="black" />) : (
-                  <Ionicons name="home-outline" size={24} color="black" />)
-        }}
+                  <Ionicons name="home-outline" size={24} color="black" />)       
+          }}
         />
         <Tab.Screen 
-          name="Timer"
-          component={Timer}
+          name="Time"
+          component={Time}
           options={{
             tabBarIcon: ({focused}) => 
                 focused ? (
-                  <Ionicons name="timer" size={24} color="black" />) : (
+                  <Ionicons name="time" size={24} color="black" />) : (
                   <Ionicons name="timer-outline" size={24} color="black" />)
         }}
         />

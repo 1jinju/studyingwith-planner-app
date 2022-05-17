@@ -1,5 +1,5 @@
 import React from "react";
-import { createDrawerNavigator } from "@react-navigation/drawer";
+import { createAppContainer, createDrawerNavigator } from "@react-navigation/drawer";
 import StackNavigator from "./Stack";
 import Information from '../screens/Information';
 import Setting from '../screens/Setting';

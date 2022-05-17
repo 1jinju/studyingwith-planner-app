@@ -1,13 +1,16 @@
 import { useNavigation } from '@react-navigation/core'
-import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import React, {useState} from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import { Calendar } from 'react-native-calendars';
 
-function Statistics() {
+function Statistics () {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>통계</Text>
-    </View>
+      <View>
+          <Calendar/>
+      </View>
   )
 }
 
 export default Statistics
+
+

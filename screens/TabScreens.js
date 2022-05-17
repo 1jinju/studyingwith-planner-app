@@ -20,10 +20,10 @@ export const Home = () => {
 );
 };
 
-export const Timer = () => {
+export const Time = () => {
   return (
     <Container>
-        <StyledText>Timer</StyledText>
+        <StyledText>Time</StyledText>
     </Container>
 );
 };
