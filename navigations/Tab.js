@@ -23,7 +23,11 @@ const Tabs = ({route}) => {
         swipeEnabled: false,
         tabBarIndicatorStyle: {
             backgroundColor: "white"
-        }
+        },
+        headerTitle: '✏',
+        headerTitleAlign: 'left',
+        headerTitleStyle: {fontSize: 25},
+        headerStyle:{height: 100}
     }}>
         <Tab.Screen 
           name="Home"
@@ -32,7 +36,7 @@ const Tabs = ({route}) => {
             tabBarIcon: ({focused}) => 
                 focused ? (
                   <Ionicons name="home" size={24} color="black" />) : (
-                  <Ionicons name="home-outline" size={24} color="black" />)       
+                  <Ionicons name="home-outline" size={24} color="#5D5D5D" />),
           }}
         />
         <Tab.Screen 
@@ -42,7 +46,7 @@ const Tabs = ({route}) => {
             tabBarIcon: ({focused}) => 
                 focused ? (
                   <Ionicons name="time" size={24} color="black" />) : (
-                  <Ionicons name="timer-outline" size={24} color="black" />)
+                  <Ionicons name="timer-outline" size={24} color="#5D5D5D" />),
         }}
         />
         <Tab.Screen 
@@ -52,7 +56,7 @@ const Tabs = ({route}) => {
             tabBarIcon: ({focused}) => 
                 focused ? (
                   <Ionicons name="bar-chart" size={24} color="black" />) : (
-                  <Ionicons name="bar-chart-outline" size={24} color="black" />)
+                  <Ionicons name="bar-chart-outline" size={24} color="#5D5D5D" />),
         }}
         />
         <Tab.Screen 
@@ -62,7 +66,7 @@ const Tabs = ({route}) => {
             tabBarIcon: ({focused}) => 
                 focused ? (
                   <Ionicons name="download" size={24} color="black" />) : (
-                  <Ionicons name="download-outline" size={24} color="black" />)
+                  <Ionicons name="download-outline" size={24} color="#5D5D5D" />),
         }}
         />
     </Tab.Navigator>

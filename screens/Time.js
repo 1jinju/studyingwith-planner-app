@@ -6,9 +6,9 @@ import { Stopwatch, Timer } from 'react-native-stopwatch-timer';
 import { Ionicons } from '@expo/vector-icons';
 import moment from 'moment';
 
-const nowTime = moment().format('YYYY년 MM월 DD일');
+const nowTime = moment().format('YYYY.MM.DD');
 
-const Time = ({}) => {
+const Time = ({navigation}) => {
 
   const [start, setStart] = useState(false);
   const [reset, setReset] = useState(false);
@@ -22,26 +22,36 @@ const Time = ({}) => {
     setStart(false);
     setReset(true);
   }
+  
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: ()=>
+      <View style={{flexDirection:'row', paddingRight:20}}>
+        <Ionicons name="search" size={25} color="#5D5D5D" style={{paddingRight:20}} onPress={()=>navigation.navigate('')} />
+        <Ionicons name="person-circle" size={25} color="#5D5D5D" style={{paddingRight:20}} onPress={()=>navigation.navigate('Follow')} />
+        <Ionicons name="notifications" size={25} color="#5D5D5D" style={{paddingRight:20}} onPress={()=>navigation.navigate('Notification')} />
+        <Ionicons name="menu" size={25} color="#5D5D5D" onPress={()=>navigation.navigate('')}/>
+      </View>        
+    });
+  }, []);
 
   return (
     <View style={options.view}>
-      <View>
-        <Text style={{marginTop: 10, marginLeft: 10, alignContent: 'flex-start', fontSize:27, fontWeight: 'bold', padding: 10}}>{nowTime}</Text>
-        </View>
-      <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 100}}>
+      <View style={{alignItems: 'center', justifyContent: 'center', marginTop: 160}}>
         <Stopwatch laps msecs  start={start}
           reset={reset}
           options={options}
+          //time().format('HH:MM:SS')
           getTime={(time) => {}} />
         <View style={{flexDirection:'row'}}>
           <TouchableOpacity onPress={toggleStopwatch}>
             <Text>{!start ? 
-              (<Ionicons name="add-circle" size={100} color='#0782F9'/>) : 
-              (<Ionicons name="stop-circle" size={100} color='#0782F9'/>)}
+              (<Ionicons name="caret-forward-circle" size={80} color="#0782F9" />) : 
+              (<Ionicons name="stop-circle" size={80} color='#0782F9'/>)}
             </Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={resetStopwatch}>
-            <Text><Ionicons name="refresh-circle" size={100} color='#0782F9'/></Text>
+            <Text><Ionicons name="refresh-circle" size={80} color='#0782F9'/></Text>
           </TouchableOpacity>
         </View>
       </View>
