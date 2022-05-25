@@ -7,7 +7,7 @@ import moment from 'moment';
 import TodoInsert from '../components/TodoInsert';
 import TodoList from '../components/TodoList';
 import { Ionicons } from '@expo/vector-icons';
-import {DrawerActions} from 'react-navigation-drawer';
+//import {DrawerActions} from 'react-navigation-drawer';
 
 const nowTime = moment().format('YYYY.MM.DD');
 
@@ -45,7 +45,7 @@ const Home = ({navigation}) => {
     navigation.setOptions({
       headerRight: ()=>
       <View style={{flexDirection:'row', paddingRight:20}}>
-        <Ionicons name="search" size={25} color="#5D5D5D" style={{paddingRight:20}} onPress={()=>navigation.navigate('')} />
+        <Ionicons name="search" size={25} color="#5D5D5D" style={{paddingRight:20}} onPress={()=>navigation.navigate('Search')} />
         <Ionicons name="person-circle" size={25} color="#5D5D5D" style={{paddingRight:20}} onPress={()=>navigation.navigate('Follow')} />
         <Ionicons name="notifications" size={25} color="#5D5D5D" style={{paddingRight:20}} onPress={()=>navigation.navigate('Notification')} />
         <Ionicons name="menu" size={25} color="#5D5D5D" onPress={()=>DrawerActions.openDrawer()}/>

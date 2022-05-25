@@ -21,6 +21,7 @@ import { createNativeStackNavigator, createStackNavigator } from "@react-navigat
 import { StyleSheet, View, Text } from 'react-native';
 import Home from '../screens/Home';
 import Login from '../screens/Login';
+import Folllow from '../screens/Follow';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +30,7 @@ const StackNavigator = () => {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Follow" component={Follow} />
       </Stack.Navigator>
   );
 }
