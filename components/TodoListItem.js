@@ -18,6 +18,8 @@ const TodoListItem = ({textValue, id, checked, onRemove, onToggle}) => {
       <TouchableOpacity style={styles.buttonContainer}>
         <Text style={{marginLeft: 15, marginRight: 15}} onPress={onRemove(id)}>
             <AntDesign name="delete" size={30} color="#e33057" />
+            {/*<Ionicons name="heart-outline" size={30} color="red" />*/}
+            {/*<Ionicons name="heart" size={30} color="red" />*/}
         </Text>
     </TouchableOpacity>
     </View>

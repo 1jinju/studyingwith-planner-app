@@ -5,7 +5,7 @@ import { StyleSheet, Text, TouchableOpacity, View, ScrollView, Image } from 'rea
 
 function FollowingTab() {
   return (
-    <ScrollView>
+    <ScrollView style={styles.container}>
         <View style={styles.container}>
             <View style={styles.profileView}>
                 <View style={styles.imageView}>
@@ -15,7 +15,7 @@ function FollowingTab() {
                         style={styles.imageStyle}></Image>
                 </View>
                 <View style={styles.textView}>
-                        <Text>쩝쩝박사</Text>
+                        <Text>조현지</Text>
                 </View>
             </View>
 
@@ -28,7 +28,7 @@ function FollowingTab() {
                 </View>
                 <View style={styles.textView}>
                     <View style = {styles.editView}>
-                        <Text style={styles.profileTxt}>쩝쩝박사</Text>
+                        <Text style={styles.profileTxt}>히주</Text>
                     </View>
             </View>
             </View>
@@ -42,7 +42,7 @@ function FollowingTab() {
                 </View>
                 <View style={styles.textView}>
                     <View style = {styles.editView}>
-                        <Text style={styles.profileTxt}>쩝쩝박사</Text>
+                        <Text style={styles.profileTxt}>🍉난이송아💥</Text>
                     </View>
             </View>
             </View>
@@ -56,7 +56,7 @@ function FollowingTab() {
                 </View>
                 <View style={styles.textView}>
                     <View style = {styles.editView}>
-                        <Text style={styles.profileTxt}>쩝쩝박사</Text>
+                        <Text style={styles.profileTxt}>싸갈</Text>
                     </View>
             </View>
             </View>
@@ -70,7 +70,7 @@ function FollowingTab() {
                 </View>
                 <View style={styles.textView}>
                     <View style = {styles.editView}>
-                        <Text style={styles.profileTxt}>쩝쩝박사</Text>
+                        <Text style={styles.profileTxt}>슬빔</Text>
                     </View>
             </View>
             </View>
@@ -84,7 +84,7 @@ function FollowingTab() {
                 </View>
                 <View style={styles.textView}>
                     <View style = {styles.editView}>
-                        <Text style={styles.profileTxt}>쩝쩝박사</Text>
+                        <Text style={styles.profileTxt}>졍</Text>
                     </View>
             </View>
             </View>
@@ -98,7 +98,7 @@ function FollowingTab() {
                 </View>
                 <View style={styles.textView}>
                     <View style = {styles.editView}>
-                        <Text style={styles.profileTxt}>쩝쩝박사</Text>
+                        <Text style={styles.profileTxt}>김미숙🐶</Text>
                     </View>
             </View>
             </View>
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         flexDirection: 'row',
         paddingTop: 20,
-        paddingBottom: 10,
+        paddingBottom: 3,
         paddingLeft: 30,
       },
     imageStyle: {
@@ -127,9 +127,11 @@ const styles = StyleSheet.create({
         borderRadius: 100,
       },
     textView:{
-        paddingTop: 20,
-        paddingBottom: 10,
-        marginRight: 200,
+        flex: 1,
+        justifyContent:'center',
+        paddingLeft: 20,
+        paddingVertical: 15,
+        //marginRight: 200,
     },
 });
 

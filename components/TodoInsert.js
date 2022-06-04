@@ -25,7 +25,7 @@ const TodoInsert = ({onAddTodo}) => {
       />
       <View style={styles.text}>
         <Text onPress={addTodoHandler}><Ionicons name="add-circle" size={45} color='#0782F9'/></Text>
-      </View>
+    </View>
     </View>
   );
 };

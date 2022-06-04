@@ -21,7 +21,7 @@ function Download({navigation}) {
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>기출문제</Text>
+      <Text></Text>
     </View>
   )
 }
