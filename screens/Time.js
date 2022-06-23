@@ -41,7 +41,6 @@ const Time = ({navigation}) => {
         <Stopwatch laps msecs  start={start}
           reset={reset}
           options={options}
-          //time().format('HH:MM:SS')
           getTime={(time) => {}} />
         <View style={{flexDirection:'row'}}>
           <TouchableOpacity onPress={toggleStopwatch}>

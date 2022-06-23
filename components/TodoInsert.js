@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, StyleSheet, TextInput, View, Text} from 'react-native';
+import {StyleSheet, TextInput, View, Text} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 const TodoInsert = ({onAddTodo}) => {

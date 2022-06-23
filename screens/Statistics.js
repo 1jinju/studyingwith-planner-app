@@ -57,7 +57,6 @@ function Statistics ({navigation}) {
         </View>
           <View style={styles.card}>
             <ScrollView>
-            <Text>안녕</Text>
               <TodoInsert onAddTodo={addTodo} />
               <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
             </ScrollView>
